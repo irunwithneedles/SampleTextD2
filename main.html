@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sample Text</title>
+	<style>
+		body{
+			font-family: Ariel, sans-serif;
+		}
+
+		.header{
+			padding:80 px;
+			text-align: center;
+			background:#323836;
+			color:#FFFFFF;
+		}
+
+		.main{
+			background: #FFFFFF;
+			margin-left: 500px;
+			padding: 0px 10px; 
+		}
+
+		.navbar{
+			overflow: hidden;
+			background-color: #777777;
+			position: sticky;
+			top: 0;
+		}
+
+		.navbar a{
+			float: left;
+			display: block;
+			color: white;
+			text-align: center;
+			padding:14px 20px;
+			text-decoration: none;
+		}
+
+		.navbar a:hover{
+			background-color: #dddddd;
+			color:black;
+		}
+
+		.navbar a.active{
+			background-color: #666666:
+			color:white; 
+		}
+		.sidebar{
+			position: fixed;
+			z-index: 1;
+			top: 200px;
+			overflow-x: hidden;
+			width: 500px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="sidebar">
+		<iframe src="https://discord.com/widget?id=298068750245167114&amp;theme=dark" width="500" height="700" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+	</div>
+	<div class="header">
+		<h2>Sample Text</h2>
+		<p>Founded October 6, 2019</p>
+		<p><i>Game Sucks</i></p>
+	</div>
+	<div class="navbar">
+		<a href="https://www.bungie.net/en/ClanV2/Index?groupId=3910069">Clan</a>
+		<a href="https://raid.report/">Raid Report</a>
+		<a href="https://trials.report/">Trials Report</a>
+		<a href="https://dungeon.report/">Dungeon Report</a>
+		<a href="https://light.gg">Light.gg</a>
+	</div>
+	<div class="main">
+		<h3>This is where the Bungie API accessibility will be:</h3>
+		<p>First I need to figure out how it even works since bungie doesn't have any example documentation.</p>
+	</div>
+</body>
+</html>
