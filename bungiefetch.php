@@ -7,5 +7,5 @@
  curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-API-Key: ' . $apiKey));
 
  $json = json_decode(curl_exec($ch));
- echo $json; //Gjallarhorn\
+ echo $json; //Gjallarhorn
  ?>

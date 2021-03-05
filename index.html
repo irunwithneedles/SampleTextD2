@@ -73,16 +73,9 @@
 	</div>
 	<div class="main">
 		<h3>Clan Engram Status:</h3>
-		<p id="clanengrams"></p>
+		<p id="clanengrams">If you are seeing this message I haven't figured out PHP yet...</p>
 		<script>
-			if(typeof(EventSource) !== "undefined") {
-				var source = new EventSource("bungiefetch.php");
-				source.onmessage = function(event) {
-					document.getElementById("result").innerHTML += event.data + "<br>";
-				};
-			} else {
-				document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
-			}
+
 		</script>
 		<noscript>Javascript is disabled or the browser does not support JavaScript!</noscript>
 	</div>
