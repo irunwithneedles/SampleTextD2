@@ -1,59 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="utf-8">
 	<title>Sample Text</title>
-	<style>
-		body{
-			font-family: Ariel, sans-serif;
-		}
-
-		.header{
-			padding:80 px;
-			text-align: center;
-			background:#323836;
-			color:#FFFFFF;
-		}
-
-		.main{
-			background: #FFFFFF;
-			margin-left: 500px;
-			padding: 0px 10px; 
-		}
-
-		.navbar{
-			overflow: hidden;
-			background-color: #777777;
-			position: sticky;
-			top: 0;
-		}
-
-		.navbar a{
-			float: left;
-			display: block;
-			color: white;
-			text-align: center;
-			padding:14px 20px;
-			text-decoration: none;
-		}
-
-		.navbar a:hover{
-			background-color: #dddddd;
-			color:black;
-		}
-
-		.navbar a.active{
-			background-color: #666666:
-			color:white; 
-		}
-		.sidebar{
-			position: fixed;
-			z-index: 1;
-			top: 200px;
-			overflow-x: hidden;
-			width: 500px;
-		}
-
-	</style>
+	<link href="index.css" rel="stylesheet">
 </head>
 <body>
 	<div class="sidebar">
@@ -72,23 +22,9 @@
 		<a href="https://light.gg">Light.gg</a>
 	</div>
 	<div class="main">
-		<h3>Clan Engram Status:</h3>
+		<h3>Xur Status:</h3>
 		<p id="clanengrams"></p>
-		<script>
-			var apiKey = "2f0369fc936941f7a71542fa95f592af";
-			var xhr = new XMLHttpRequest();	
-			xhr.open("GET", "https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/", true);
-			xhr.setRequestHeader("X-API-Key", apiKey);
-
-			xhr.onreadystatechange = function(){
-				if(this.readyState === 4 && this.status === 200){
-					var json = JSON.parse(this.responseText);
-					document.getElementById("clanengrams").innerHTML = json.Response;
-					console.log(json.Response); //Gjallarhorn
-				}
-			}
-			xhr.send();
-		</script>
+		<script src="bungiefetch.js"></script>
 		<noscript>Javascript is disabled or the browser does not support JavaScript!</noscript>
 	</div>
 </body>
