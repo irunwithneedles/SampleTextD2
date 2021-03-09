@@ -2,23 +2,21 @@ var apiKey = "2f0369fc936941f7a71542fa95f592af";
 var rootPath = "https://www.bungie.net/Platform/";
 
 
-//Xur Linkage
-var membershipType = "Account";
-var destinyMembershipId = "";
-var characterId = "";
-var vendorHash = "";
+//Clan Engrams Linkage
+var groupId = "3910069";
 
 var xhr = new XMLHttpRequest();	
 
-xhr.open("GET", rootPath + "Destiny2/" + membershipType + "/Profile/"+ destinyMembershipId + "/Character/" + characterId + "/Vendors/" + vendorHash + "/", true);
+xhr.open("GET", rootPath + "Destiny2/Clan/" + groupId + "/WeeklyRewardState/", true);
 xhr.setRequestHeader("X-API-Key", apiKey);
 
 xhr.onreadystatechange = function(){
 	if(this.readyState === 4 && this.status === 200){
 		var reply = JSON.parse(this.responseText);
-		document.getElementById("Xur").innerHTML = reply.ErrorStatus;
-		console.log(reply.ErrorStatus); //Gjallarhorn
+		document.getElementById("CEngram").innerHTML = reply.Response.rewards
+		console.log(reply.Response.rewards); //Gjallarhorn
 	}
+	else(document.getElementById("CEngram").innerHTML = "Looks like someone caused a wipe...")
 }
 xhr.send();
 

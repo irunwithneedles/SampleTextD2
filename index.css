@@ -1,16 +1,19 @@
 body{
 			font-family: Ariel, sans-serif;
+			background-color: #F0F0F0;
+			background-image: url("https://www.bungie.net/common/destiny2_content/icons/e76dac4b765f694bd2e50eef00aa95d4.png");
+			background-size: contain;
+			
 		}
 
 		.header{
-			padding:80 px;
+			padding:20px;
 			text-align: center;
 			background:#323836;
 			color:#FFFFFF;
 		}
 
 		.main{
-			background: #FFFFFF;
 			margin-left: 500px;
 			padding: 0px 10px; 
 		}
@@ -43,7 +46,8 @@ body{
 		.sidebar{
 			position: fixed;
 			z-index: 1;
-			top: 200px;
+			top: 230px;
 			overflow-x: hidden;
 			width: 500px;
 		}
+
